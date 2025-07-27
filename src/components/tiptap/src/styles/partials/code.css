@@ -1,0 +1,90 @@
+.ProseMirror code {
+  caret-color: #ffffff;
+  color: #d4d4d4;
+  background-color: #1e1e1e;
+  border-radius: 2px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  font-family: monospace;
+}
+
+.ProseMirror code::selection {
+  background-color: #264f78; /* VS Code selection color */
+}
+
+.ProseMirror pre {
+  caret-color: #ffffff;
+  background-color: #1e1e1e;
+  color: #d4d4d4;
+  border-radius: 6px;
+  margin: 3rem 0;
+  padding: 1rem;
+  border: 1px solid #333333;
+}
+
+.ProseMirror pre.dark {
+  background-color: #1e1e1e;
+  border: 1px solid #2d2d2d;
+}
+
+.ProseMirror pre *::selection {
+  background-color: rgba(100, 100, 100, 0.2);
+}
+
+.ProseMirror pre code {
+  background-color: inherit;
+  color: inherit;
+  padding: 0;
+  box-shadow: none;
+}
+
+/* Syntax Highlighting */
+.ProseMirror pre .hljs-comment,
+.ProseMirror pre .hljs-quote {
+  color: #6a9955;
+}
+
+.ProseMirror pre .hljs-variable,
+.ProseMirror pre .hljs-template-variable,
+.ProseMirror pre .hljs-attribute,
+.ProseMirror pre .hljs-tag,
+.ProseMirror pre .hljs-name,
+.ProseMirror pre .hljs-regexp,
+.ProseMirror pre .hljs-link,
+.ProseMirror pre .hljs-selector-id,
+.ProseMirror pre .hljs-selector-class {
+  color: #d16969;
+}
+
+.ProseMirror pre .hljs-number,
+.ProseMirror pre .hljs-meta,
+.ProseMirror pre .hljs-built_in,
+.ProseMirror pre .hljs-builtin-name,
+.ProseMirror pre .hljs-literal,
+.ProseMirror pre .hljs-type,
+.ProseMirror pre .hljs-params {
+  color: #b5cea8;
+}
+
+.ProseMirror pre .hljs-string,
+.ProseMirror pre .hljs-symbol,
+.ProseMirror pre .hljs-bullet {
+  color: #ce9178;
+}
+
+.ProseMirror pre .hljs-title,
+.ProseMirror pre .hljs-section {
+  color: #569cd6;
+}
+
+.ProseMirror pre .hljs-keyword,
+.ProseMirror pre .hljs-selector-tag {
+  color: #c586c0;
+}
+
+.ProseMirror pre .hljs-emphasis {
+  font-style: italic;
+}
+
+.ProseMirror pre .hljs-strong {
+  font-weight: 700;
+}

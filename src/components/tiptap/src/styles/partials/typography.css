@@ -1,0 +1,188 @@
+.ProseMirror p {
+  line-height: 1.625; /* Equivalent to leading-relaxed */
+  margin-top: 0.75rem; /* Equivalent to my-3 */
+  margin-bottom: 0.75rem;
+}
+
+.ProseMirror p:first-child {
+  margin-top: 0;
+}
+
+.ProseMirror p:last-child {
+  margin-bottom: 0;
+}
+
+.ProseMirror > p {
+  margin-top: 1.5rem; /* Equivalent to my-6 */
+  margin-bottom: 1.5rem;
+}
+
+.ProseMirror > p:first-child {
+  margin-top: 0;
+}
+
+.ProseMirror > p:last-child {
+  margin-bottom: 0;
+}
+
+/* Headings */
+.ProseMirror h1 {
+  font-size: 1.875rem; /* Equivalent to text-3xl */
+}
+
+.ProseMirror h2 {
+  font-size: 1.5rem; /* Equivalent to text-2xl */
+}
+
+.ProseMirror h3 {
+  font-size: 1.25rem; /* Equivalent to text-xl */
+}
+
+.ProseMirror h4 {
+  font-size: 1.125rem; /* Equivalent to text-lg */
+}
+
+.ProseMirror h5 {
+  font-size: 1rem; /* Equivalent to text-base */
+}
+
+.ProseMirror h6 {
+  font-size: 0.875rem; /* Equivalent to text-sm */
+}
+
+.ProseMirror h1,
+.ProseMirror h2,
+.ProseMirror h3,
+.ProseMirror h4,
+.ProseMirror h5,
+.ProseMirror h6 {
+  font-weight: bold;
+}
+
+.ProseMirror h1:first-child,
+.ProseMirror h2:first-child,
+.ProseMirror h3:first-child,
+.ProseMirror h4:first-child,
+.ProseMirror h5:first-child,
+.ProseMirror h6:first-child {
+  margin-top: 0;
+}
+
+.ProseMirror h1:last-child,
+.ProseMirror h2:last-child,
+.ProseMirror h3:last-child,
+.ProseMirror h4:last-child,
+.ProseMirror h5:last-child,
+.ProseMirror h6:last-child {
+  margin-bottom: 0;
+}
+
+.ProseMirror h1,
+.ProseMirror h2,
+.ProseMirror h3 {
+  margin-top: 3rem; /* Equivalent to mt-12 */
+}
+
+.ProseMirror h4,
+.ProseMirror h5,
+.ProseMirror h6 {
+  margin-top: 2rem; /* Equivalent to mt-8 */
+}
+
+/* Links */
+.ProseMirror a.link {
+  cursor: pointer;
+  color: #002150; /* Equivalent to text-blue-500 */
+  font-weight: 800; /* Equivalent to font-extrabold */
+}
+
+@media (prefers-color-scheme: dark) {
+  .ProseMirror a.link {
+    color: #002150; /* Equivalent to dark:text-blue-400 */
+  }
+}
+
+/* Mark */
+.ProseMirror mark {
+  background-color: #ef4444; /* Equivalent to bg-red-500 */
+  border-radius: 0.125rem; /* Equivalent to rounded-sm */
+  padding: 0.25rem 0; /* Equivalent to py-1 px-0 */
+}
+
+@media (prefers-color-scheme: dark) {
+  .ProseMirror mark {
+    background-color: #f87171; /* Equivalent to dark:bg-red-400 */
+  }
+}
+
+/* Images */
+.ProseMirror img {
+  height: auto;
+  width: 100%;
+  max-width: 100%;
+}
+
+/* Horizontal Rule */
+.ProseMirror [data-type='horizontalRule'] {
+  margin-top: 2rem; /* Equivalent to my-8 */
+  margin-bottom: 2rem;
+  padding-top: 1rem; /* Equivalent to py-4 */
+  padding-bottom: 1rem;
+  transition: all 0.1s ease-in-out;
+  cursor: pointer;
+}
+
+.ProseMirror [data-type='horizontalRule'].ProseMirror-selectednode {
+  background-color: rgba(0, 0, 0, 0.05); /* Equivalent to bg-black/5 */
+}
+
+@media (prefers-color-scheme: dark) {
+  .ProseMirror [data-type='horizontalRule'].ProseMirror-selectednode {
+    background-color: rgba(255, 255, 255, 0.1); /* Equivalent to dark:bg-white/10 */
+  }
+}
+
+.ProseMirror [data-type='horizontalRule'].ProseMirror-selectednode hr {
+  border-top: 1px solid rgba(0, 0, 0, 0.3); /* Equivalent to border-t-black/30 */
+}
+
+@media (prefers-color-scheme: dark) {
+  .ProseMirror [data-type='horizontalRule'].ProseMirror-selectednode hr {
+    border-top: 1px solid rgba(255, 255, 255, 0.3); /* Equivalent to dark:border-t-white/30 */
+  }
+}
+
+.ProseMirror [data-type='horizontalRule']:hover:not(.ProseMirror-selectednode) {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+@media (prefers-color-scheme: dark) {
+  .ProseMirror [data-type='horizontalRule']:hover:not(.ProseMirror-selectednode) {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+}
+
+.ProseMirror [data-type='horizontalRule'] hr {
+  border: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+@media (prefers-color-scheme: dark) {
+  .ProseMirror [data-type='horizontalRule'] hr {
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    background-color: rgba(255, 255, 255, 0.8);
+  }
+}
+
+/* Emoji */
+.ProseMirror [data-type='emoji'] {
+  display: inline-block;
+}
+
+.ProseMirror [data-type='emoji'] img {
+  width: 1em;
+  height: 1em;
+  object-fit: cover;
+  display: block;
+}

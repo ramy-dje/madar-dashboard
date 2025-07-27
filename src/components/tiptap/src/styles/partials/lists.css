@@ -1,0 +1,81 @@
+.ProseMirror {
+  ol {
+    list-style-type: decimal;
+  }
+
+  ul {
+    list-style-type: disc;
+  }
+
+  ul,
+  ol {
+    padding: 0 2rem;
+    margin: 1.5rem 0;
+  }
+
+  ul:first-child,
+  ol:first-child {
+    margin-top: 0;
+  }
+
+  ul:last-child,
+  ol:last-child {
+    margin-bottom: 0;
+  }
+
+  ul ul,
+  ul ol,
+  ul li,
+  ol ul,
+  ol ol,
+  ol li {
+    margin: 0.25rem 0;
+  }
+
+  ul p,
+  ol p {
+    margin-top: 0;
+    margin-bottom: 0.25rem;
+  }
+
+  & > ul,
+  & > ol {
+    margin: 2rem 0;
+  }
+
+  & > ul:first-child,
+  & > ol:first-child {
+    margin-top: 0;
+  }
+
+  & > ul:last-child,
+  & > ol:last-child {
+    margin-bottom: 0;
+  }
+
+  ul[data-type='taskList'] {
+    list-style: none;
+    padding: 0;
+  }
+
+  ul[data-type='taskList'] p {
+    margin: 0;
+  }
+
+  ul[data-type='taskList'] li {
+    display: flex;
+  }
+
+  ul[data-type='taskList'] li > label {
+    margin-top: 0.25rem;
+    margin-right: 0.5rem;
+    user-select: none;
+  }
+
+  ul[data-type='taskList'] li > div {
+  }
+
+  ul[data-type='taskList'] li[data-checked='true'] {
+    text-decoration: line-through;
+  }
+}
